@@ -6,17 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.display = "block";
   }
 
-  localStorage.setItem("userDetails",JSON.stringify(obj));
-  let userDetails=JSON.parse(localStorage.getItem("userDetails"));
-  console.log(userDetails);
-  let nickName=userDetails.nickName;
-  let userName=userDetails.userName;
-
   // Start the game
   function startGame() {
     const modal = document.querySelector(".modal");
     const playerNameInput = document.getElementById("playerName");
-    const playerNickNameInput = document.getElementById("playerNickName");
+    const playerNickNameInput = document.getElementById("nickName");
     const playerName = playerNameInput.value.trim();
     const playerNickName = playerNickNameInput.value.trim();
     
@@ -31,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let userName = document.getElementById("playerName").value;
-    let nickName = document.getElementById("playerNickName").value;
+    let nickName = document.getElementById("nickName").value;
 
     let obj={
       userName,
@@ -45,6 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
     nameHead.style.margin="25px";
     nameHead.style.marginRight="-100px";
     nameHead.style.fontSize="60px";
+
+
+    localStorage.setItem("userDetails",JSON.stringify(obj));
 
     // Hide the modal asking for player name
     modal.style.display = "none";
@@ -143,10 +140,16 @@ document.addEventListener("DOMContentLoaded", function () {
           movesCount++;
 
           if (revealedCount === tileCount) {
+            var timeSpan = document.getElementById('time');
+            var totalTime = timeSpan.innerText;
+            let totalMoves = movesCount;
             clearInterval(timerInterval);
+            let obj2={
+              totalMoves,
+              totalTime
+            }
+            localStorage.setItem("movestime",JSON.stringify(obj2));
             window.location.href = "../gameOver/gameOver.html";
-            
-            showEndGamePopup(playerName, movesCount, minutes, seconds);
           }
 
           document.getElementById("moves-count").innerText = movesCount;
@@ -185,42 +188,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  //End screen function  
-  function showEndGamePopup(playerName, movesCount, minutes, seconds) {
-    const popup = document.querySelector(".end-game-popup");
-    const popupContent = document.querySelector(".popup-content");
-
-    const message = document.createElement("p");
-    message.textContent = `Congratulations, ${playerName}! You won in ${movesCount} moves, ${minutes} minutes, and ${seconds} seconds.`;
-
-    const homeButton = document.createElement("button");
-    homeButton.textContent = "Home";
-    homeButton.addEventListener("click", () => location.reload());
-
-    const playAgainButton = document.createElement("button");
-    playAgainButton.textContent = "Play Again";
-    playAgainButton.addEventListener("click", () => {
-      location.reload();
-    });
-
-    const settingsButton = document.createElement("button");
-    settingsButton.textContent = "Settings";
-
-    popupContent.innerHTML = "";
-    popupContent.appendChild(message);
-    popupContent.appendChild(homeButton);
-    popupContent.appendChild(playAgainButton);
-    popupContent.appendChild(settingsButton);
-
-    popup.style.display = "block";
-  }
-
   showModal();
 
   const startButton = document.getElementById("startButton");
   startButton.addEventListener("click", startGame);
-  var scoreMain = localStorage.setItem("movesCount");
-  var minutesMain = localStorage.setItem("minutes");
-  var secondsMain = localStorage.setItem("seconds");
-  
 });
