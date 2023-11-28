@@ -28,10 +28,17 @@ body {
   font-size: 85px;
 }
 /* Sound button, music button - off color */
-#sound-button.off,
 #music-button.off {
   color: grey;
   background: transparent;
+}
+#sound-button{
+  padding-left: 160px;
+  color: #acacac;
+  background: #676767
+}
+sub {
+  font-size: 15px;
 }
 
 #back-button {
