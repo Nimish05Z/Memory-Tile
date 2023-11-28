@@ -6,8 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.display = "block";
   }
 
+  localStorage.setItem("userDetails",JSON.stringify(obj));
   let userDetails=JSON.parse(localStorage.getItem("userDetails"));
-  // console.log(userDetails);
+  console.log(userDetails);
   let nickName=userDetails.nickName;
   let userName=userDetails.userName;
 
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function startGame() {
     const modal = document.querySelector(".modal");
     const playerNameInput = document.getElementById("playerName");
-    const playerNickNameInput = document.getElementById("nickName");
+    const playerNickNameInput = document.getElementById("playerNickName");
     const playerName = playerNameInput.value.trim();
     const playerNickName = playerNickNameInput.value.trim();
     
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let userName = document.getElementById("playerName").value;
-    let nickName = document.getElementById("nickName").value;
+    let nickName = document.getElementById("playerNickName").value;
 
     let obj={
       userName,
@@ -44,9 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
     nameHead.style.margin="25px";
     nameHead.style.marginRight="-100px";
     nameHead.style.fontSize="60px";
-
-
-    localStorage.setItem("userDetails",JSON.stringify(obj));
 
     // Hide the modal asking for player name
     modal.style.display = "none";
