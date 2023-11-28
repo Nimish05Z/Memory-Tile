@@ -1,6 +1,6 @@
 
 body {
-  background-image: url("/assets/images/setting-bg.png");
+  background-image: url("../assets/images/setting-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
@@ -73,7 +73,7 @@ li,
 
 @media screen and (max-width: 845px) {
   body {
-    background-image: url("/assets/images/setting-bg.png");
+    background-image: url("../assets/images/setting-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;

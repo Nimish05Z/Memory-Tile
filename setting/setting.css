@@ -1,6 +1,6 @@
 /* BODY - background */
 body {
-  background-image: url("/assets/images/setting-bg.png");
+  background-image: url("../assets/images/setting-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   /* width: auto; */
