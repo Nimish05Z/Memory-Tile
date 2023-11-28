@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="./gameOver.js"></script>
-</head>
-<body>
+    <script src="./gameOver.js" defer></script>
+    <link rel="stylesheet" href="./gameOver.css" />
+    <link rel="stylesheet" href="../common/common.css" />
+    <script src="../common/common.js"></script>
+  </head>
+  <body>
+    <div>
+      <div>
+        <p id="scoreboardHeading"></p>
+      </div>
+      <div id="scoreboard">
+        <p id="usermoves"></p>
+        <p id="usertime"></p>
+      </div>
+    </div>
     <div id="finalScore"></div>
     <div id="time"></div>
-</body>
+    <div class="bottomButtons">
+      <button class="button">
+        <a href="../main/main.html">
+          <p>Play Again</p>
+        </a>
+      </button>
+      <button class="button">
+        <a href="../home/home.html">
+          <p>Home</p>
+        </a>
+      </button>
+      <button class="button">
+        <a href="../setting/setting.html">
+          <p>Settings</p>
+        </a>
+      </button>
+      <button class="button">
+        <a href="../index.html">
+          <p>exit</p>
+        </a>
+      </button>
+    </div>
+  </body>
 </html>

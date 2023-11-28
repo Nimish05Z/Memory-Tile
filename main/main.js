@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     let nameHead = document.getElementById("name");
-    console.log(nameHead);
     nameHead.innerHTML=`${nickName}'s&nbsp= `;
     
     nameHead.style.margin="25px";

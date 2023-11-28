@@ -1,0 +1,25 @@
+body{
+    background: url("https://tenor.com/view/confetti-gif-18499443") no-repeat center center fixed;
+    background-color: #1d3a55;
+    text-align: center;
+}
+#scoreboardHeading{
+    font-size: 800%;
+}
+#scoreboard{
+    margin-top: 100px;
+}
+#usermoves, #usertime{
+    margin-top: 30px;
+    font-size: 400%;
+}
+.bottomButtons{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+.button{
+    width: 300px;
+    height: 100px;
+    font-size: 50px;
+}
