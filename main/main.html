@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./main.css" />
+  <link rel="stylesheet" href="/common/common.css" />
+  <script src="./main.js" defer></script>
+  <script src="/common/common.js"></script>
+  <title>MEMORY TILE</title>
+  <audio id="clickSound" preload="auto">
+    <source src="/assets/music/buttonclick.wav" type="audio/wav">
+  </audio>
+</head>
+<body>
+  <audio id="audio" autoplay loop>
+    <source src="/assets/music/Spending Time on Us - Artificial.Music [Audio Library Release] · Free Copyright-safe Music.mp3" type="audio/mpeg">
+  </audio>
+  <div class="modal">
+    <label for="playerName">What's your name Ninja:</label>
+    <br />
+    <input type="text" id="playerName" placeholder="Enter Your Here" />
+    <input type="text" id="nickName" placeholder="Enter NickName Here" />
+    <br />
+    <button id="startButton">Start Game</button>
+  </div>
+
+  <div class="end-game-popup">
+    <div class="popup-content"></div>
+  </div>
+
+  <div class="header">
+    <div id="div-back-button">
+      <a href="/home/home.html">
+          <button id="back-button" onclick="playClickSound();">
+              <img id="back-svg" src="/assets/svgs/back-arrow-svgrepo-com.svg" alt="backarrow">
+          </button>
+      </a>
+    </div>
+    <div class="heading">
+      <p>MEMORY TILE</p>
+    </div>
+    <div>
+      <p id="name"></p> 
+    </div>
+    <div class="moves-time">
+      <div class="subhead">MOVES:<span id="moves-count">0</span></div>
+      <div class="subhead">TIME: <span id="time">00:00</span></div>
+    </div>
+    
+  </div>
+  <div class="tiles" onclick="playClickSound();"></div>
+
+  <div class="controls-container">
+    <p id="game-message"></p>
+  </div>
+</body>
+</html>

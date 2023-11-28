@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+
+    <link rel="stylesheet" href="./setting.css">
+    <script src="./setting.js"></script>
+    <script src="/common/common.js"></script>
+    <link rel="stylesheet" href="/common/common.css">
+
+    <audio id="audio" preload="auto" autoplay loop>
+		<source src="/assets/music/Spending Time on Us - Artificial.Music [Audio Library Release] · Free Copyright-safe Music.mp3" type="audio/mpeg">
+	</audio>
+    <audio id="clickSound" preload="auto">
+        <source src="/assets/music/buttonclick.wav" type="audio/wav">
+    </audio>
+
+</head>
+<body>
+    <div id="header-part">
+        <div id="div-back-button">
+            <a href="/home/home.html">
+                <button id="back-button" onclick="playClickSound();">
+                    <img id="back-svg" src="/assets/svgs/back-arrow-svgrepo-com.svg" alt="backarrow">
+                </button>
+            </a>
+        </div>
+        <div class="font-color">
+            <p class="setting-game-name">SETTINGS</p>
+        </div>
+    </div>
+    <div class="all-buttons">
+        <div id="div-sound-button">
+            <button id="sound-button" class="button on" onclick="playClickSound(); soundButton()">
+                <p id="soundtext">SOUND - ON</p>
+            </button>
+        </div>
+        <div id="div-music-button">
+            <button id="music-button" class="button on" onclick="playClickSound(); musicButton()">
+                <p>MUSIC - ON</p>
+            </button>
+        </div>
+        <div id="div-instruction-button">
+            <a href="/instruction/instruction.html">
+                <button id="instruction-button" class="button" onclick="playClickSound();">
+                    <p>INSTRUCTIONS</p>
+                </button>
+            </a>
+        </div>  
+    </div>
+</body>
+</html>

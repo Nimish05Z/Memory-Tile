@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <link rel="stylesheet" href="/home/home.css" />
+    <script src="/common/common.js"></script>
+    <link rel="stylesheet" href="/common/common.css" />
+    <audio id="clickSound" preload="auto">
+        <source src="/assets/music/buttonclick.wav" type="audio/wav">
+    </audio>
+  </head>
+  <body>
+    <div id="header-part">
+        <div class="font-color">
+            <p class="home-game-name">MEMORY</p>
+            <p class="home-game-name">TILE</p>
+        </div>
+        <div id="div-setting-button">
+            <button id="setting-button" onclick="playClickSound();">
+                <a href="/setting/setting.html">
+                    <img id="setting-svg" src="/assets/svgs/settings-svgrepo-com.svg" alt="settings">
+                </a>
+            </button>
+        </div>
+    </div>
+    <div class="all-buttons">
+        <div id="div-play-button">
+            <a href="/main/main.html">
+                <button id="play-button" class="button" onclick="playClickSound();">
+                    <p>PLAY</p>
+                </button>
+            </a>
+        </div>
+        <br><br><br><br>
+        <div id="custom-exit-button">
+            <div id="div-custom-button">
+                <button id="custom-button" class="button" onclick="playClickSound();">
+                    <p>CUSTOM<sub>(COMING SOON)</sub></p>
+                </button>
+            </div>
+            <div id="div-exit-button">
+                <a href="/index.html">
+                    <button id="exit-button" class="button" onclick="playClickSound();">
+                        <p>EXIT</p>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <audio id="audio" preload="auto" autoplay loop>
+        <source src="/assets/music/Spending Time on Us - Artificial.Music [Audio Library Release] · Free Copyright-safe Music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+  </body>
+  <script src="/home/home.js"></script>
+</html>

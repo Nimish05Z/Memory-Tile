@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "samurai-blast";
+        src: url("/assets/fonts/SamuraiBlast-8MnyD.otf") format("opentype"),
+          url("/assets/fonts/misc/SamuraiBlast.woff") format("woff"),
+          url("/assets/fonts/SamuraiBlast-YznGj.ttf") format("truetype");
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "samurai-blast";
+      }
+      p {
+        background: -webkit-linear-gradient(#00ffff, #8dd5d5, #d24e4e);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .start{
+        margin-top: 30vh;
+        font-size: 10vw;
+      }
+      div p{
+        font-size: 2vw;
+        text-align: left;
+        margin-top: 30vh;
+        margin-left: 5vh;
+      }
+      .button {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to bottom left, #902cff, #3f1371);
+        color: #00ffff;
+        cursor: pointer;
+        box-shadow: 1px 1px 5px black;
+      }
+      .button:hover {
+        background: linear-gradient(to bottom right, #902cff, #3f1371);
+      }
+      .button:active {
+        background: linear-gradient(to bottom right, #902cff, #3f1371);
+        box-shadow: 0px 0px 5px black;
+      }
+    </style>
+    <script src="/common/common.js"></script>
+  </head>
+  <body>
+    <a href="/home/home.html">
+      <button class="button">
+        <p class="start">Start</p>
+        <div>
+            <p>CREATED BY: NIMISH GARG</p>
+        </div>
+      </button>
+    </a>
+    
+  </body>
+</html>

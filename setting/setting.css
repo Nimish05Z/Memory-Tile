@@ -1,0 +1,60 @@
+/* BODY - background */
+body {
+  background-image: url("/assets/images/setting-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* width: auto; */
+}
+/* Header(backbutton, Tilte) - Flex, titlesize, margin */
+#header-part {
+  display: flex;
+  justify-content: space-between;
+}
+.setting-game-name {
+  font-size: 200px;
+  margin-right: 250px;
+}
+/* All buttons - Flex, direction, alignment, top margin */
+.all-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Buttton structure, fsize, top margin */
+.button {
+  margin-top: 60px;
+  width: 650px;
+  height: 100px;
+  font-size: 85px;
+}
+/* Sound button, music button - off color */
+#sound-button.off,
+#music-button.off {
+  color: grey;
+  background: transparent;
+}
+
+#back-button {
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 100px;
+  height: 100px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+#back-button:hover {
+  animation: moveAnimation 0.5s infinite alternate;
+}
+#back-svg {
+  width: 120px;
+  height: 120px;
+}
+svg {
+  transition: transform 0.3s ease-in-out;
+}
+@keyframes moveAnimation {
+  to {
+    transform: translateX(-20px);
+  }
+}
